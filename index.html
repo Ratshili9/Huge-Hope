@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discovery Box - Student Support</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="assets/logo/logo.jpg" alt="Discovery Box Logo" class="logo">
+        <h1>Student Reporting System</h1>
+    </header>
+
+    <div class="container">
+        <form id="reportForm">
+            <!-- School -->
+            <div class="form-group">
+                <label for="school">School Name*</label>
+                <input type="text" id="school" name="school" required>
+            </div>
+
+            <!-- Student Details -->
+            <div class="form-group">
+                <label for="fullname">Full Name*</label>
+                <input type="text" id="fullname" name="fullname" required>
+            </div>
+
+            <div class="form-group">
+                <label for="dob">Date of Birth*</label>
+                <input type="date" id="dob" name="date_of_birth" required>
+            </div>
+
+            <div class="form-group">
+                <label for="grade">Grade*</label>
+                <select id="grade" name="grade" required>
+                    <option value="">Select Grade</option>
+                    <option value="8">Grade 8</option>
+                    <option value="9">Grade 9</option>
+                    <option value="10">Grade 10</option>
+                    <option value="11">Grade 11</option>
+                    <option value="12">Grade 12</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Gender*</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Select</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <!-- Incident Date (Auto-filled) -->
+            <input type="hidden" id="incident_date" name="incident_date">
+
+            <!-- Issue Reporting -->
+            <div class="form-group">
+                <label for="category">Category of Problem*</label>
+                <select id="category" name="category" required>
+                    <option value="">Select</option>
+                    <option value="Bullying">Bullying</option>
+                    <option value="Abuse">Abuse</option>
+                    <option value="Academic">Academic</option>
+                    <option value="Mental Health">Mental Health</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <div id="other-category-field" class="form-group" style="display:none;">
+                <label for="other_category">Specify*</label>
+                <input type="text" id="other_category" name="other_category">
+            </div>
+
+            <!-- Contact Method -->
+            <div class="form-group">
+                <label for="contact_method">Preferred Contact Method*</label>
+                <select id="contact_method" name="contact_method" required>
+                    <option value="">Select</option>
+                    <option value="Email">Email</option>
+                    <option value="Phone">Phone</option>
+                    <option value="WhatsApp">WhatsApp</option>
+                </select>
+            </div>
+
+            <div id="email-field" class="form-group" style="display:none;">
+                <label for="email">Email*</label>
+                <input type="email" id="email" name="email">
+            </div>
+
+            <div id="phone-field" class="form-group" style="display:none;">
+                <label for="phone">Phone*</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+
+            <!-- Message -->
+            <div class="form-group">
+                <label for="message">Message*</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+
+            <button type="submit">Submit Report</button>
+            <p id="statusMessage"></p>
+        </form>
+    </div>
+
+  <footer>
+    <p>Hope For Future/Discovery Box NPC &copy; 2024 | Creating Safe Schools in Limpopo</p>
+    <p>Contact: info@discoverybox@gmail.com | WhatsApp: 064 723 9504/ 066 555 6822</p>
+  </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
