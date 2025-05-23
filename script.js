@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             const formData = new URLSearchParams(new FormData(form));
-            const response = await fetch('https://script.google.com/macros/s/AKfycbwM29olyuZl4Im3-PFyqxmkaYqbihw5xaNISzsNtVTS8rdN_odd2ZeGl_AvvK3BdVux/exec', {
+            const response = await fetch("Place ur data-base key here", {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                 body: formData
